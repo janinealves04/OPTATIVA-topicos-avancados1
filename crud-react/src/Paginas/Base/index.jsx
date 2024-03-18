@@ -1,35 +1,33 @@
-import {Layout, Menu} from "antd";
+import { Flex, Layout, Menu} from "antd";
 import { Outlet, Link } from "react-router-dom";
+import logo from "../../assets/logo_ifrn.jpg";
 
+const { Sider, Content } = Layout;
 
-const {Header, Sider, Content} = Layout;
-
-
-function Base (){
-     return (
+function Base() {
+    return (
         <Layout>
-            <Header>
-                {/* Conteudo do  cabeçalho*/}
-            </Header>
-            <Layout>
-                <Sider>
-                    <Menu theme="dark" mode="inline">
-                        <Menu.Item key= "home">
-                            <Link to="/">Home</Link>
-                        </Menu.Item>
+            <Sider theme="light">
+                <Flex justify={"center"} style={{margin: 10}}>
+                <img src={logo} alt ="Logo do ifrn" style={{width: 120}}/>
+                </Flex>
+                <Menu mode="inline">
+                    <Menu.Item key="home">
+                        <Link to="/">Home</Link>
+                    </Menu.Item>
 
-                        <Menu.Item key= "turmas">
-                            <Link to="/turmas">Turmas</Link>
-                        </Menu.Item>
-                    </Menu>
-                </Sider>
-                <Content style={{minHeight:"100vh", margin: "10px"}}>
-                    <Outlet/>
-                </Content>
-            </Layout>
+                    <Menu.Item key="turmas">
+                        <Link to="/turmas">Turmas</Link>
+                    </Menu.Item>
+                </Menu>
+            </Sider>
+            <Content style={{ minHeight: "100vh", margin: "10px" }}>
+                <Outlet />
+            </Content>
         </Layout>
 
 
-     );
+
+    );
 }
 export default Base;
