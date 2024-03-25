@@ -29,6 +29,18 @@ const TurmaService = {
         } catch (error) {
             throw error;
         }
+    },
+    excluir : async (id) => {
+        try {
+            const resposta = await fetch(`${BASE_URL_TURMAS}/${id}`, 
+            {method : "DELETE"}
+            );
+            if (!resposta.ok){
+                throw new Error("Erro ao excluir turmas");
+            }
+        }catch(erro){
+            throw erro;
+        }
     }
 }
 export default TurmaService;
