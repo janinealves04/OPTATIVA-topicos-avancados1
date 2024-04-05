@@ -1,18 +1,8 @@
 const express = require("express");
-const conexao = require("../util/db");
-
+const executarComandosSQL = require("../util/sql");
 const router = express.Router();
 
-function executarComandosSQL(sql, params, res, erroMsg){
-    conexao.query(sql, params, (err, result) => {
-        if (err){
-            res.status(500).json({erro : erroMsg, 
-                                 detalhes : err});
-        }else{
-            res.status(200).json(result);
-        }
-    })
-}
+
 
 router.get("/",(req, res) => {
     let sql = "select * from turma";
