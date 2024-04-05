@@ -19,6 +19,9 @@ function Base() {
                     <Menu.Item key="turmas">
                         <Link to="/turmas">Turmas</Link>
                     </Menu.Item>
+                    <Menu.Item key="alunos">
+                        <Link to="/alunos">Alunos</Link>
+                    </Menu.Item>
                 </Menu>
             </Sider>
             <Content style={{ minHeight: "100vh", margin: "10px" }}>

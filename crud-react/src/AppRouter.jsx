@@ -12,6 +12,7 @@ function AppRouter () {
              <Route path="/" element={<Base/>}> 
                 <Route index element={<Home/>}/>
                 <Route path= "/turmas" element={<TurmaTabela/>}/>
+                <Route path= "/alunos" element={<AlunoTabela/>}/>
                 <Route path= "*" element={<NaoEncontrada/>}/>
             </Route>
              </Routes>
