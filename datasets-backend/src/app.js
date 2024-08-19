@@ -27,4 +27,4 @@ app.use(`/api/${config.versaoAPI}/users`,userRouter);
 app.use(`/api/${config.versaoAPI}/profiles`,profileRouter);
 app.use(`/api/${config.versaoAPI}/permissions`,permissionRouter);
 
-export default app;
+export default app;;
