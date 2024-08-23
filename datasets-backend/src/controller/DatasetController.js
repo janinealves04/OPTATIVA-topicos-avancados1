@@ -38,6 +38,20 @@ export async function createDataset(req, res) {
     }
 }
 
+//buffers  trabalha com dados binarios(no sistema transformou em bytes)
+//cria nesse arquivo a validação do dataset
+//importação do dotenv from "dotenv" e dotenv config 
+//amqp + error caso aconteça + envio de messagem
+/*
+const channel = await connectAMQP();
+if (channel){
+    const message = JSON.stringfy({name, filepath});
+    channel.sendToQueue("dstasets", )
+}
+
+
+*\
+
 /**
  * Recupera todos os datasets armazenados no banco de dados.
  *
